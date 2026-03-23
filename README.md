@@ -11,7 +11,7 @@ An **Excel file** with a predefined schema serves as bais for each of them that 
 
 The PythonPart **SOM2_1Attribute** can be installed directly from the PluginManager in ALLPLAN. 
 
-Alternatively, the corresponding ***.allep** package can be downloaded from the [release page](https://github.com/AnkeNiedermaier/som-attribute-public/releases). ***.allep** files are ALLPLAN internal setups that can be installed via drag and drop into the program window.
+Alternatively, the corresponding ***.allep** package can be downloaded from the [release page](https://github.com/AnkeNiedermaier/som-attributes-public/releases). ***.allep** files are ALLPLAN internal setups that can be installed via drag and drop into the program window.
 
 At least the version 2026 is needed to install the PythonPart.
 
