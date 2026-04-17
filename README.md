@@ -45,20 +45,20 @@ alle in der Spalte **Typ** mit **Eigenschaft** gekennzeichneten Zeilen enthalten
 
 und werden, falls nicht vorhanden, beim Ausführen des PythonParts als neue benutzerdefinierte Attribute angelegt
 
-<img src = "./docs/DefinitionTable.png" width = 500/><br/>
+<img src = "./docs/DefinitionTable.png" width = 700/><br/>
 
-<img src = "./docs/Definition_I.png" width = 200/>
-<img src = "./docs/Definition_II.png" width = 200/><br/>
+<img src = "./docs/Definition_I.png" width = 400/>
+<img src = "./docs/Definition_II.png" width = 400/><br/>
 
 
 ### für die Zuweisung
 
 die in der Spalte **Typ** mit **Element** gekennzeichneten Zeilen enthalten in der Spalte **Name** den Kenner für die Objektbezeichnung. Allen diesbezüglich klassifizierten Objekten werden die in den folgenden **Eigenschaftzeilen** aufgeführten Einträge als Attribute angehängt. In welches ALLPLAN Attribut die Objektbezeichnung eingetragen wird ist dabei frei wählbar
 
-<img src = "./docs/AssignTable.png" width = 400/><br/>
+<img src = "./docs/AssignTable.png" width = 700/><br/>
 
-<img src = "./docs/Assign_I.png" width = 200/>
-<img src = "./docs/Assign_II.png" width = 200/><br/>
+<img src = "./docs/Assign_I.png" width = 400/>
+<img src = "./docs/Assign_II.png" width = 400/><br/>
 
 ### für die Mappingtabelle
 
@@ -66,9 +66,9 @@ während Attributname und -typ gleich bleiben, wird das jeweilige **PSet**, in d
 
 Das Mapping erfolgt dabei entweder global für alle Objekte oder individuell für eine bestimmte **IfcEntity** (Klasse), je nachdem ob für das jeweilige **Element** in der Spalte **IFC 4 Add2** eine spezielle Klasse (IfcPipe, IfcFooting, ...) oder **IfcBuildingElementProxy** eingetragen ist.
 
-<img src = "./docs/MappingTable.png" width = 500/><br/>
+<img src = "./docs/MappingTable.png" width = 700/><br/>
 
-<img src = "./docs/MappingAll.png" width = 300/><br/>
+<img src = "./docs/MappingAll.png" width = 400/><br/>
 
 ## Workflow
 
@@ -81,14 +81,14 @@ Analog der Einzelschritte is die Palette ebenfalls in die Bereiche
 
 sowie den übergeordneten Bereich **Allgemeine Einstellungen** aufgeteilt. Dieser ist für alle gleichermaßen gültig und dient zum **Einlesen** der **Excel Tabelle** sowie der Festlegung der aktuell zu betrachtenden **Phase** und des relvanten **Gewerkes**.
 
-<img src = "./docs/SettingsAllgemein.png" width = 300/><br/>
+<img src = "./docs/SettingsAllgemein.png" width = 400/><br/>
 
 > ⚠️ACHTUNG\
 Grundsätzlich sind die einzelnen Schritte voneinander unabhängig und müssen auch nicht zwangsläufig in einem Zuge oder direkt nacheinander asugeführt werden. Die **Definition** und damit das **Anlegen der Attribute** ist allerdings zwingend notwendig, um diese anschließend **zuweisen** oder **mappen** zu können. Sie steht daher immer am Anfang.
 
 Bevor eine **Zuweisung** an die einzelnen Modellobjekte erfolgen kann, muss diesen das ausgewählte **Kenner-Attribut** zugewiesen und darin der jeweils passende **Kenner-Wert** (Elementname) eingetragen werden. Durch einen Klick auf die Schaltfläche Objekte **wählen** wird der allgemeine Auswahldialog von ALLPLAN gestartet. In diesem stehen sämtliche Selektionsmöglichkeiten wie Bereichseingabe oder Filter zur Verfügung. Anschließend wird die Zuweisung durch einen Klick auf die gleichnamige Schaltfläche gestartet.
 
-<img src = "./docs/AssignEinstellung.png" width = 200/><br/>
+<img src = "./docs/AssignEinstellung.png" width = 400/><br/>
 
 # SOMAttributes
 
