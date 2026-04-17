@@ -45,7 +45,7 @@ alle in der Spalte **Typ** mit **Eigenschaft** gekennzeichneten Zeilen enthalten
 
 und werden, falls nicht vorhanden, beim Ausführen des PythonParts als neue benutzerdefinierte Attribute angelegt
 
-<img src = "./docs/DefinitionTable.png" width = 700/><br/>
+<img src = "./docs/DefinitionTable.png" width = 800/><br/>
 
 <img src = "./docs/Definition_I.png" width = 400/>
 <img src = "./docs/Definition_II.png" width = 400/><br/>
@@ -68,7 +68,7 @@ Das Mapping erfolgt dabei entweder global für alle Objekte oder individuell fü
 
 <img src = "./docs/MappingTable.png" width = 700/><br/>
 
-<img src = "./docs/MappingAll.png" width = 400/><br/>
+<img src = "./docs/MappingAll.png" width = 500/><br/>
 
 ## Workflow
 
