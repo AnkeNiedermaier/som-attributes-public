@@ -1,0 +1,27 @@
+plugin:
+  name: SOM2_1Attribute
+  UUID: eedb1643-8962-4192-93ff-92f542550f9c
+  version: 1.0.0
+  developer: allplan-gmbh
+  default-language: eng
+  min-allplan-version: 2026
+
+installation:
+  target-location: STD
+
+tools:
+  - id: SOM2_1Attribute
+    pyp: Library\Allplan GmbH\SOM2_1Attribute.pyp
+    display-name:
+      en: SOM2_1Attributes
+      de: SOM2_1Attribute
+    icons:
+      small: PythonPartsActionbar\allplan_gmbh\SOM2_1Attribute_24.png
+      large: PythonPartsActionbar\allplan_gmbh\SOM2_1Attribute_128.png
+
+task-area:
+  display-name:
+    en: SOM_Attribute
+    de: SOM_Attributes
+  layout:
+    - SOM_1Attributes

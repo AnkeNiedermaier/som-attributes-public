@@ -29,6 +29,66 @@ Nach erfolgreicher Installation ist die Datei **SOM2_1Attribute.pyp** zusammen m
 
 Das PythonParts wird neben der Bibliothek auch in einem neu angelegten Aufgabenbereich **SOM_Attributes** in der Aufgabe **Plug-in** in die ActionBar aufgenommen.
 
+Im Gegensatz zu den anderen Dateien lassen sich die **Excel Tabellen** naträglich in einen beliebigen anderen (Unter)ordner kopieren oder verschieben.
+
+## Erläuterung der Tabellen
+
+Die beiden Tabellen sind generell gleich aufgebaut und enthalten alle notwendigen Parameter und Werte, die für die einzelnen Schritte notwendig sind. Die Gliederung erfolgt anhand von Gewerken und Fachrichtungen, wobei jeweils nur die Tabellenblätter mit den **Langnamen** für das PythonPart relevant sind.
+
+### zur Attributdefinition
+
+alle in der Spalte **Typ** mit **Eigenschaft** gekennzeichneten Zeilen enthalten eine entsprechende Definition mit den hierfür notwendigen Parametern
+- Name
+- Typ
+- optional Einheit
+- optional Werteliste
+
+und werden, falls nicht vorhanden, beim Ausführen des PythonParts als neue benutzerdefinierte Attribute angelegt
+
+<img src = "./docs/DefinitionTable.png" width = 500/><br/>
+
+<img src = "./docs/Definition_I.png" width = 200/>
+<img src = "./docs/Definition_II.png" width = 200/><br/>
+
+
+### für die Zuweisung
+
+die in der Spalte **Typ** mit **Element** gekennzeichneten Zeilen enthalten in der Spalte **Name** den Kenner für die Objektbezeichnung. Allen diesbezüglich klassifizierten Objekten werden die in den folgenden **Eigenschaftzeilen** aufgeführten Einträge als Attribute angehängt. In welches ALLPLAN Attribut die Objektbezeichnung eingetragen wird ist dabei frei wählbar
+
+<img src = "./docs/AssignTable.png" width = 400/><br/>
+
+<img src = "./docs/Assign_I.png" width = 200/>
+<img src = "./docs/Assign_II.png" width = 200/><br/>
+
+### für die Mappingtabelle
+
+während Attributname und -typ gleich bleiben, wird das jeweilige **PSet**, in dem die nachfolgenden **Eigenschaften** beim IFC Export zusammengefasst werden, über die in der Spalte **Typ** mit **Gruppe** gekennzeichneten Zeilen festgelegt.
+
+Das Mapping erfolgt dabei entweder global für alle Objekte oder individuell für eine bestimmte **IfcEntity** (Klasse), je nachdem ob für das jeweilige **Element** in der Spalte **IFC 4 Add2** eine spezielle Klasse (IfcPipe, IfcFooting, ...) oder **IfcBuildingElementProxy** eingetragen ist.
+
+<img src = "./docs/MappingTable.png" width = 500/><br/>
+
+<img src = "./docs/MappingAll.png" width = 300/><br/>
+
+## Workflow
+
+Unabhängig davon, ob zusätzlich ein ActionBar Ikon erstellt wurde oder nicht, werden sämtliche installierten PythonParts in der Bibliothek abgelegt. Sie lassen sich entweder per **Doppelklick** auf den Eintrag oder **Drag und Drop** in die Zeichenfläche starten. Damit wird die zugehörige Eigenschaftenpalette eingeblendet und die hinterlegten Skripte ausgeführt.
+
+Analog der Einzelschritte is die Palette ebenfalls in die Bereiche
+- Definition
+- Zuweisung
+- Mapping
+
+sowie den übergeordneten Bereich **Allgemeine Einstellungen** aufgeteilt. Dieser ist für alle gleichermaßen gültig und dient zum **Einlesen** der **Excel Tabelle** sowie der Festlegung der aktuell zu betrachtenden **Phase** und des relvanten **Gewerkes**.
+
+<img src = "./docs/SettingsAllgemein.png" width = 300/><br/>
+
+> ⚠️ACHTUNG\
+Grundsätzlich sind die einzelnen Schritte voneinander unabhängig und müssen auch nicht zwangsläufig in einem Zuge oder direkt nacheinander asugeführt werden. Die **Definition** und damit das **Anlegen der Attribute** ist allerdings zwingend notwendig, um diese anschließend **zuweisen** oder **mappen** zu können. Sie steht daher immer am Anfang.
+
+Bevor eine **Zuweisung** an die einzelnen Modellobjekte erfolgen kann, muss diesen das ausgewählte **Kenner-Attribut** zugewiesen und darin der jeweils passende **Kenner-Wert** (Elementname) eingetragen werden. Durch einen Klick auf die Schaltfläche Objekte **wählen** wird der allgemeine Auswahldialog von ALLPLAN gestartet. In diesem stehen sämtliche Selektionsmöglichkeiten wie Bereichseingabe oder Filter zur Verfügung. Anschließend wird die Zuweisung durch einen Klick auf die gleichnamige Schaltfläche gestartet.
+
+<img src = "./docs/AssignEinstellung.png" width = 200/><br/>
 
 # SOMAttributes
 
@@ -59,3 +119,9 @@ in the ALLPLAN Library:
 `Office` → `Library` → `ALLPLAN GmbH` → `SOM2_1Attribute`
 
 Besides the library, the PythonPart can also be found in the ActionBar in a newly created task area **SOM_Attributes** inside the task **Plug-ins**.
+
+Whereas the location of all other files has to be kept, the **Excel tables** can arbitrary be copied or moved into other folders.
+
+## Workflow
+
+In general, all installed PythonParts can be found in the Library palette, no matter if an additional ActionBar entry is created or not. They are started either with a **double-click** on the icon or per **Drag and Drop** into the viewport. This shows the corresponding Properties palette and executes the underlying skripts.
