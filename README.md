@@ -90,6 +90,12 @@ Bevor eine **Zuweisung** an die einzelnen Modellobjekte erfolgen kann, muss dies
 
 <img src = "./docs/AssignEinstellung.png" width = 400/><br/>
 
+
+<a href="https://raw.githubusercontent.com/AnkeNiedermaier/som-attributes-public/main/docs/SOM_Attribute.mp4" target="_blank">
+  <img src="https://raw.githubusercontent.com/AnkeNiedermaier/som-attributes-public/main/docs/SOM_Attribute_video.png" alt="Click to play video" width="600" height="300">
+</a>
+
+
 # SOMAttributes
 
 The PythonPart enables the implementation of the requiremtes from **DB InfraGO AG** (German Railway Sytem) for the semantic, that means the alphanumeric, of objects and building components, the so called **SOM** (**S**emantic**O**bject**M**odel) in ALLPLAN. Most of the necessary steps can be executed more or less automatically:
