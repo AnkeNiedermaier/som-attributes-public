@@ -145,7 +145,7 @@ and are created as new userdefined attributes, as long as the do not exist alrea
 
 ### for the assignment
 
-in the rows marked as **Element** in the column **Typ** the relvant value of the identifyer attribute is listed in the **Name** column. The properties listed in the following **Eigenschaft** rows will be assigned to all objects that have been classified accordingly. The ALLPLAn attribute used as identyfier is freeof choice
+in the rows marked as **Element** in the column **Typ** the relvant value of the identifyer attribute is listed in the **Name** column. The properties listed in the following **Eigenschaft** rows will be assigned to all objects that have been classified accordingly. The ALLPLAn attribute used as identifyer is free of choice
 
 
 <img src = "./docs/AssignTable.png" width = 700/><br/>
@@ -155,7 +155,7 @@ in the rows marked as **Element** in the column **Typ** the relvant value of the
 
 ### regarding the mapping table
 
-the particular **PSet** in which the following **Eigenschaften** are combined during IFC export is determined in the rows marked as **Gruppe** in the **Typ** column wheras attribute name and attribute type remain constant.
+the particular **PSet** in which the following **Eigenschaften** are combined during IFC export is determined in the rows marked as **Gruppe** in the **Typ** column wheras attribute name and attribute type remain constant during the export.
 
 The mapping can either be general for all objects or customized for a special **IfcEntity**, dependent upon the value in the **IFC 4 Add2** column. If it contains a speccial class (like IfcPipe or IfcFooting) this will be taken into account, if it contains **IfcBuildingElementProxy** it will be considered as a general mapping.
 
@@ -179,6 +179,6 @@ and one part named **General settings**. It is relevant for all steps and serves
 > ⚠️IMPORTANT\
 Generally speaking, the individual steps are independend and it is not necessary to execute them consectutive in one go. However the **definition** and **creation of attributes** is a mandatory precondition to **assign** or **mapp** them afterwards. Therfor it is always the first workflow step.
 
-Prior to **assign** attributes to the model objects they have to be provided with the choosen **Identifyer attribute** and the suitable **Identifyer value** (element name). Clicking the Objects **select** button opens the general selection dialog in ALLPLAN which also provides options for filtering or area input. The assignment as such is startet afterward with the button named accordingly.
+Prior to **assign** attributes to the model objects, they have to be provided with the choosen **Identifyer attribute** and the suitable **Identifyer value** (element name). Clicking the Objects **select** button opens the general selection dialog in ALLPLAN which also provides options for filtering or area input. The assignment as such is startet afterward with the button named accordingly.
 
 <img src = "./docs/AssignSettings.png" width = 400/><br/>
