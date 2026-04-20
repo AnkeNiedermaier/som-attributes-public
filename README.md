@@ -90,6 +90,7 @@ Bevor eine **Zuweisung** an die einzelnen Modellobjekte erfolgen kann, muss dies
 
 <img src = "./docs/AssignEinstellung.png" width = 400/><br/>
 
+## Video
 
 <a href="https://raw.githubusercontent.com/AnkeNiedermaier/som-attributes-public/main/docs/SOM_Attribute.mp4" target="_blank">
   <img src="https://raw.githubusercontent.com/AnkeNiedermaier/som-attributes-public/main/docs/SOM_Attribute_video.png" alt="Click to play video" width="600" height="300">
