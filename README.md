@@ -74,7 +74,7 @@ Das Mapping erfolgt dabei entweder global für alle Objekte oder individuell fü
 
 Unabhängig davon, ob zusätzlich ein ActionBar Ikon erstellt wurde oder nicht, werden sämtliche installierten PythonParts in der Bibliothek abgelegt. Sie lassen sich entweder per **Doppelklick** auf den Eintrag oder **Drag und Drop** in die Zeichenfläche starten. Damit wird die zugehörige Eigenschaftenpalette eingeblendet und die hinterlegten Skripte ausgeführt.
 
-Analog der Einzelschritte is die Palette ebenfalls in die Bereiche
+Analog der Einzelschritte ist die Palette ebenfalls in die Bereiche
 - Definition
 - Zuweisung
 - Mapping
@@ -122,6 +122,63 @@ Besides the library, the PythonPart can also be found in the ActionBar in a newl
 
 Whereas the location of all other files has to be kept, the **Excel tables** can arbitrary be copied or moved into other folders.
 
+## Explanation of the table
+
+In general both tables are ordered identically and contain all relevant parameters and values necessary for the individual steps. They are structured based on trades or disciplines, in which only sheets with **long names** are relevant for the PythonPart.
+
+### for attribute definition
+
+all rows marked with **Eigenschaft** in the **Typ** column contain a definition with its necessary parameters
+
+- Name
+- Typ
+- optional Einheit
+- optional Werteliste
+
+and are created as new userdefined attributes, as long as the do not exist already.
+
+
+<img src = "./docs/DefinitionTable.png" width = 800/><br/>
+
+<img src = "./docs/DefinitionAll_I.png" width = 400/>
+<img src = "./docs/DefinitionAll_II.png" width = 400/><br/>
+
+### for the assignment
+
+in the rows marked as **Element** in the column **Typ** the relvant value of the identifyer attribute is listed in the **Name** column. The properties listed in the following **Eigenschaft** rows will be assigned to all objects that have been classified accordingly. The ALLPLAn attribute used as identyfier is freeof choice
+
+
+<img src = "./docs/AssignTable.png" width = 700/><br/>
+
+<img src = "./docs/AssignAll_I.png" width = 400/>
+<img src = "./docs/AssignAll_II.png" width = 400/><br/>
+
+### regarding the mapping table
+
+the particular **PSet** in which the following **Eigenschaften** are combined during IFC export is determined in the rows marked as **Gruppe** in the **Typ** column wheras attribute name and attribute type remain constant.
+
+The mapping can either be general for all objects or customized for a special **IfcEntity**, dependent upon the value in the **IFC 4 Add2** column. If it contains a speccial class (like IfcPipe or IfcFooting) this will be taken into account, if it contains **IfcBuildingElementProxy** it will be considered as a general mapping.
+
+<img src = "./docs/MappingTable.png" width = 700/><br/>
+
+<img src = "./docs/MappingAll.png" width = 500/><br/>
+
 ## Workflow
 
 In general, all installed PythonParts can be found in the Library palette, no matter if an additional ActionBar entry is created or not. They are started either with a **double-click** on the icon or per **Drag and Drop** into the viewport. This shows the corresponding Properties palette and executes the underlying skripts.
+
+Similar to the single steps the palette is also divided into the different parts
+- definition
+- assignment
+- mapping
+
+and one part named **General settings**. It is relevant for all steps and serves to **read** the **Excel table** and to determin the current **phase** and **trade** that should be considered.
+
+<img src = "./docs/SettingsGeneral.png" width = 400/><br/>
+
+> ⚠️IMPORTANT\
+Generally speaking, the individual steps are independend and it is not necessary to execute them consectutive in one go. However the **definition** and **creation of attributes** is a mandatory precondition to **assign** or **mapp** them afterwards. Therfor it is always the first workflow step.
+
+Prior to **assign** attributes to the model objects they have to be provided with the choosen **Identifyer attribute** and the suitable **Identifyer value** (element name). Clicking the Objects **select** button opens the general selection dialog in ALLPLAN which also provides options for filtering or area input. The assignment as such is startet afterward with the button named accordingly.
+
+<img src = "./docs/AssignSettings.png" width = 400/><br/>
